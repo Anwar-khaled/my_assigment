@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>circle color</title>
+<style>
+  .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+      red 0deg 72deg,
+      white 72deg 144deg,
+      black 144deg 216deg,
+      blue 216deg 288deg,
+      pink 288deg 360deg
+    );
+    border: 2px solid black;
+  }
+
+  .circle1{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(
+      red 0% 25%,
+      white 25% 50%,
+      black 50% 65%,
+      blue 65% 80%,
+      pink 80% 100%
+    );
+    border: 2px solid black;
+
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    gap: 40px;
+  }
+
+  
+</style>
+</head>
+<body>
+
+<div class="circle"><b>conic-gradient</b></div>
+
+<div class="circle1"><b>linear-gradient</b></div>
+
+</body>
+</html>
