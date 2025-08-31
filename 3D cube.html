@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Cube </title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+      margin: 0;
+      perspective: 1000px; 
+    }
+
+    .scene {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: Cube 6s infinite linear;
+    }
+
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      opacity: 0.9;
+    }
+
+    .front  { background: crimson;  transform: rotateY(0deg) translateZ(100px); }
+    .back   { background: teal;     transform: rotateY(180deg) translateZ(100px); }
+    .right  { background: purple;   transform: rotateY(90deg) translateZ(100px); }
+    .left   { background: orange;   transform: rotateY(-90deg) translateZ(100px); }
+    .top    { background: green;    transform: rotateX(90deg) translateZ(100px); }
+    .behind { background: blue;     transform: rotateX(-90deg) translateZ(100px); }
+
+    @keyframes Cube {
+      from { transform: rotateX(0deg) rotateY(0deg); }
+      to   { transform: rotateX(360deg) rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="face front">Front</div>
+    <div class="face back">Back</div>
+    <div class="face right">Right</div>
+    <div class="face left">Left</div>
+    <div class="face top">Top</div>
+    <div class="face behind">Behind</div>
+  </div>
+</body>
+</html>
+
