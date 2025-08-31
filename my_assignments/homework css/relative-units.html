@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Example of Relative Units in CSS</title>
+<style>
+  body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 20px;
+  }
+  .example {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1> Example of Relative Units</h1>
+
+<!-- 1. % -->
+<div class="example">
+  <h2>% </h2>
+  <div style="width: 400px; height: 200px; background: lightgray;">
+    <div style="width: 50%; height: 50%; background:lightgreen;">anwar khaled
+        <!--   مربع  بنسبة 50% من الأب حيث يعتمد على حجم العنصر الأب   -->
+    </div>
+  </div>
+</div>
+
+<!-- 2. em -->
+<div class="example" style="font-size: 15px;">
+  <h2>em</h2>
+  <p style="font-size: 2em; background: lightblue;">anwar khaled</p>
+  <!--  هذا النص حجمه ضعف حجم الخط في العنصر الأب وتستخدم لعمل المسافات أو حجم خط نسبي لخط العنصر نفسه-->
+</div>
+
+<!-- 3. rem -->
+<div class="example">
+  <h2>rem</h2>
+  <p style="font-size: 2rem; background: lightgreen;">anwar khaled</p>
+  <!-- هذا النص حجمه ضعف حجم الخط للجذر ومهما تغير حجم العنصر الأب تبقى rem نسبة للجذر-->
+</div>
+
+<!-- 4. vw -->
+<div class="example">
+  <h2>vw</h2>
+  <p style="font-size: 10vw; background: lightyellow;">anwar khaled</p>
+  <!-- النص يساوي 10% من عرض النافذة ويعتمد على عرض صفحة المتصفح-->
+</div>
+
+<!-- 5. vh -->
+<div class="example">
+  <h2>vh</h2>
+  <div style="height: 50vh; background: lightcoral;">
+    anwar khaled
+    <!-- ارتفاع هذا الصندوق نصف ارتفاع الشاشة وتعتمد على ارتفاع صفحة المتصفح-->
+  </div>
+</div>
+
+<!-- 6. vmin -->
+<div class="example">
+  <h2>vmin</h2>
+  <div style="width: 50vmin; height: 50vmin; background: lightskyblue;">
+    anwar khaled
+     <!--  مربع بحجم نصف أصغر بُعد للشاشة  حيث تأخذ أصغر قيمة بين العرض و الارتفاع للصفحة-->
+  </div>
+</div>
+
+<!-- 7. vmax -->
+<div class="example">
+  <h2>vmax</h2>
+  <div style="width: 50vmax; height: 50vmax; background: lightseagreen;">
+    anwar khaled
+     <!-- مربع بحجم نصف أكبر بُعد للشاشة   حيث تأخذ أكبر قيمة بين العرض و الارتفاع للصفحة-->
+  </div>
+</div>
+
+<!-- 8. ex -->
+<div class="example">
+  <h2>ex</h2>
+  <p style="font-size: 25px; line-height: 5ex; background: lightsalmon;">
+    anwar khaled
+     <!-- هذا النص ارتفاع السطر فيه يساوي 5 أضعاف ارتفاع الحرف x وتعتمد عاى ارتفاع الحرف x في الخط المستخدم
+      تستخدم في تصميمات تتطلب توافق مع ارتفاع الحروف-->
+  </p>
+</div>
+
+<!-- 9. ch -->
+<div class="example">
+  <h2>ch</h2>
+  <div style="width: 20ch; background: pink;">
+    anwar khaled
+    <!-- صندوق عرضه يساوي عرض 20 للحرف صفر لانه غالبا ثابت العرض في الخطوط المتساوية العرض وتستخدم لتحديد عرض مربعات النصوص الادخال بحيث تكفي لعدد معين من الحروف وهنا في المثال صندوق يكفي لكتابة 20 حرف-->
+  </div>
+</div>
+
+</body>
+</html>
